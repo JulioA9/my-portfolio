@@ -36,12 +36,12 @@ export async function POST(request) {
     };
 
     await ddbDocClient.send(new PutCommand(params));
-    return NextResponse.json(
-      { message: "" },
-      { status: 200 }
-    );
+    return NextResponse.json({ message: "Email Sent!" }, { status: 200 });
   } catch (err) {
     console.error("Error adding item:", err);
-    return NextResponse.json({ error: "Failed send email. Please try again later :(" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to send email. Please try again later." },
+      { status: 500 }
+    );
   }
 }
