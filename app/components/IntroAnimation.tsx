@@ -12,7 +12,7 @@ export default function IntroAnimation() {
       }}
     >
       <div className="space-y-2">
-        <h1 className="text-6xl lg:text-8xl font-extrabold">Hey! I'm</h1>
+        <h1 className="text-6xl lg:text-8xl font-extrabold">Hey I'm</h1>
         <h1 className="text-6xl lg:text-8xl font-extrabold">Julio Aguero</h1>
         <p className="text-xl">Software Developer</p>
       </div>

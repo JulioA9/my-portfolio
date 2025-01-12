@@ -47,11 +47,6 @@ const skillsData: SkillTab[] = [
   { id: 9, name: "Firebase", icon: "firebase" },
 ];
 
-const headerVariants = {
-  hidden: { opacity: 0, y: -20 },
-  visible: { opacity: 1, y: 0 },
-};
-
 const SkillsSection: React.FC = () => {
   const cardVariants = {
     initial: { y: 50, opacity: 0 },

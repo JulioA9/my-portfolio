@@ -1,14 +1,16 @@
 "use client";
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 
 export default function ContactCard() {
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(event: any) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setLoading(true);
 
-    const formData = new FormData(event.target);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
     const body = {
       fullName: formData.get("fullName"),
       emailInput: formData.get("emailInput"),
@@ -25,7 +27,7 @@ export default function ContactCard() {
       if (response.ok) {
         const { message } = await response.json();
         alert(message);
-        event.target.reset();
+        form.reset();
       } else {
         const { error } = await response.json();
         alert(`Error: ${error}`);
@@ -40,7 +42,7 @@ export default function ContactCard() {
 
   return (
     <div className="flex flex-col space-y-2">
-      <h2>Send me An email!</h2>
+      <h2>Send me an email!</h2>
       <form onSubmit={handleSubmit}>
         <div className="space-y-2">
           <input

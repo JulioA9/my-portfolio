@@ -2,7 +2,7 @@
 
 import React, { JSX, useRef } from "react";
 import ProjectCards from "./ProjectCards";
-import { animate, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 interface Project {
   id: number;
