@@ -47,6 +47,11 @@ const skillsData: SkillTab[] = [
   { id: 9, name: "Firebase", icon: "firebase" },
 ];
 
+const headerVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const SkillsSection: React.FC = () => {
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -56,7 +61,14 @@ const SkillsSection: React.FC = () => {
   return (
     <div id="skills" className="px-8 py-16 pt-24">
       <div className="flex mb-8">
-        <h2 className="text-4xl md:text-6xl font-bold">My Skills ⚙️</h2>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl md:text-6xl font-bold"> My Skills ⚙️</h2>
+        </motion.div>
       </div>
 
       <ul className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">

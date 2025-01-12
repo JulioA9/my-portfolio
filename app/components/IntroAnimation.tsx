@@ -1,7 +1,4 @@
-import { Roboto } from "next/font/google";
 import * as motion from "motion/react-client";
-
-const roboto = Roboto({ weight: "700" });
 
 export default function IntroAnimation() {
   return (
@@ -14,7 +11,7 @@ export default function IntroAnimation() {
         bounce: 0.5,
       }}
     >
-      <div className={roboto.className}>
+      <div className="space-y-2">
         <h1 className="text-6xl lg:text-8xl font-extrabold">Hey! I'm</h1>
         <h1 className="text-6xl lg:text-8xl font-extrabold">Julio Aguero</h1>
         <p className="text-xl">Software Developer</p>

@@ -1,17 +1,16 @@
-"use client";  {/* Ensure this is a client component */}
+"use client";
 
-import { Roboto } from "next/font/google";
 import Link from "next/link";
 import ContactCard from "./ContactCard";
 import { motion } from "framer-motion";
 
-const roboto = Roboto({ weight: "700" });
+
 
 const ContactSection = () => {
   return (
     <div
       id="contact"
-      className={`${roboto.className} flex flex-col pt-16 p-4 w-full space-y-4`}
+      className={` flex flex-col pt-16 p-4 w-full space-y-4`}
     >
       <motion.div
         initial={{ opacity: 0 }}
